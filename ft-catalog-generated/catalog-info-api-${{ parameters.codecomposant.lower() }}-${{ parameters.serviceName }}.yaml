@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ${{ parameters.codecomposant.lower() }}-${{ parameters.serviceName }}
+  description: API ${{ parameters.codecomposant.lower() }}-${{ parameters.serviceName }}
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: poc-tesi25
+  definition:
+    $yaml: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-diagnostic-service.yaml
