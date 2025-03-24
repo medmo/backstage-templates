@@ -1,0 +1,45 @@
+asyncapi: 3.0.0
+info:
+  title: diagnostic-service-service
+  version: 1.0.0
+  description: ce service est genere par le portail des evenements pour produire des evenements du service 
+servers:
+  development:
+    host: so101-wave-kafka-0.so101-wave-kafka-brokers.so101-wave-crea-ic.svc:9094
+    description: Server de dev wave
+    protocol: kafka
+    protocolVersion: 1.0.0
+    tags:
+      - name: "env:development"
+        description: "Serveur de developpement pour les tests"
+operations:
+  receive-diagnostic-event:
+    action: receive
+    channel:
+      $ref: '#/channels/diagnostic-service-channel'
+    messages:
+      - $ref: '#/channels/diagnostic-service-channel/messages/diagnostic-event'
+
+channels:
+  diagnostic-service-channel:
+    address: tic.a.event.diagnostic-service.DD017
+    messages:
+      diagnostic-event:
+        $ref: '#/components/messages/diagnostic-event'
+
+components:
+  messages:
+    diagnostic-event:
+      description: 'Evenement déclenché lorquun diagnostic est cree'
+      x-eventcatalog-message-type: event
+      headers:
+        type: object
+        properties:
+          ec-message-type:
+            type: string
+            default: event
+            description: Type of message for EventCatalog
+      payload:
+        schemaFormat: 'application/vnd.apache.avro;version=1.9.0'
+        schema:
+          $ref: https://raw.githubusercontent.com/markush81/avro-examples/refs/heads/main/example/src/main/avro/user.avsc
