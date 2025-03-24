@@ -8,4 +8,4 @@ spec:
   lifecycle: production
   owner: poc-tesi25
   definition:
-    $yaml: "https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-diagnostic-service.yaml"
+    $text: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-diagnostic-service.yaml
