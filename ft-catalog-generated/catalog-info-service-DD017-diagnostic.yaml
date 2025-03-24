@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DD017-diagnostic
+  title: DD017-diagnostic
+  description: Service DD017-diagnostic
+  tags:
+    - service
+  links:
+    - url: http://git-scm.gitlab.ft.com/poc-eda/event-catalog-ft
+      title: Repo du service
+spec:
+  type: service
+  lifecycle: production
+  owner: poc-tesi25
+  providesApis:
+    - publish-diagnostic
+
