@@ -7,22 +7,5 @@ spec:
   type: asyncapi
   lifecycle: production
   owner: poc-tesi25
-  definition: |
-    asyncapi: '2.4.0'
-    info:
-      title: Example AsyncAPI specification
-      version: '0.1.0'
-    channels:
-      example-channel:
-        subscribe:
-          message:
-            payload:
-              type: object
-              properties:
-                exampleField:
-                  type: string
-                exampleNumber:
-                  type: number
-                exampleDate:
-                  type: string
-                  format: date-time
+  definition:
+    $yaml: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-Diagnostic-service.yaml#/operations/sendDiagnosticCreated
