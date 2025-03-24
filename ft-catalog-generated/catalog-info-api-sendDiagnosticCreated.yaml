@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sendDiagnosticCreated
+  description: Service sendDiagnosticCreated
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: poc-tesi25
+  defintion:
+    $yaml: 
