@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DD012-activite-declare
+  title: DD012-activite-declare
+  description: Service DD012-activite-declare
+  tags:
+    - service
+  links:
+    - url: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-consumer-notification-activite-declare.yaml
+      title: Asyncapi pour consommer l'évenement notification-activite-declare
+spec:
+  type: service
+  lifecycle: production
+  owner: poc-tesi25
+  providesApis:
+    - publish-notification-activite-declare
+
