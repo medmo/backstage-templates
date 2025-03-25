@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DD017-paiement
+  title: DD017-paiement
+  description: Service DD017-paiement
+  tags:
+    - service
+  links:
+    - url: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-consumer-notification-paiement.yaml
+      title: Asyncapi pour consommer l'évenement notification-paiement
+spec:
+  type: service
+  lifecycle: production
+  owner: poc-tesi25
+  providesApis:
+    - publish-notification-paiement
+
