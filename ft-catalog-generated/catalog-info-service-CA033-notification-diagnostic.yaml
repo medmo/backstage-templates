@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: CA033-notification-diagnostic
+  title: CA033-notification-diagnostic
+  description: Service CA033-notification-diagnostic
+  tags:
+    - service
+  links:
+    - url: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-CA033-notification-diagnostic.yaml
+      title: Asyncapi pour consommer l'évenement notification-diagnostic
+spec:
+  type: service
+  lifecycle: production
+  owner: poc-tesi25
+  providesApis:
+    - publish-notification-diagnostic
+
