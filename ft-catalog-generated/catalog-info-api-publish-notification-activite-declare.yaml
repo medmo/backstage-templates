@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: publish-notification-activite-declare
+  description: API publish-notification-activite-declare
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: poc-tesi25
+  definition:
+    $text: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-notification-activite-declare.yaml
