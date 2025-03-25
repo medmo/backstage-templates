@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: publish-rendez-vous
+  description: API publish-rendez-vous
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: poc-tesi25
+  definition:
+    $text: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-producer-rendez-vous.yaml
