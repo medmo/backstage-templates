@@ -31,7 +31,6 @@ components:
   messages:
     notification-activite-declare:
       description: 'Evenement déclenché lorquun diagnostic est cree'
-      x-eventcatalog-message-type: event
       headers:
         type: object
         properties:
