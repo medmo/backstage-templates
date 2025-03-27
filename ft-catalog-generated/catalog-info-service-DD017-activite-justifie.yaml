@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: DD017-activite-justifie
+  title: DD017-activite-justifie
+  description: Service DD017-activite-justifie
+  tags:
+    - service
+  links:
+    - url: https://raw.githubusercontent.com/medmo/backstage-templates/refs/heads/main/ft-catalog-generated/asyncapi-consumer-notification-activite-justifie.yaml
+      title: Asyncapi pour consommer l'évenement notification-activite-justifie
+spec:
+  type: service
+  lifecycle: production
+  owner: poc-tesi25
+  providesApis:
+    - publish-notification-activite-justifie
+
