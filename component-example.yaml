@@ -6,7 +6,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: guava-team
+  owner: developers
   system: guava-portal
   dependsOn:
     - resource:default/guava-db
