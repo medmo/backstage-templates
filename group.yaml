@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: developers
+  description: The developer portal business unit
+spec:
+  type: business-unit
+  profile:
+    displayName: developers
+    email: dev@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: ops
+  children: [backstage, other]
+  members: [mohammed.diedhiou]
