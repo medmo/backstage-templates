@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: guava-web
+  description: The place to be, for great artists
+spec:
+  type: website
+  lifecycle: production
+  owner: guava-team
+  system: guava-portal
+  dependsOn:
+    - resource:default/guava-db
+  dependencyOf:
+    - component:default/guava-web-lookup
+  providesApis:
+    - guava-api
